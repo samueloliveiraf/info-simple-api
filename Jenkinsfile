@@ -35,7 +35,7 @@ pipeline {
         always {
             sh 'docker-compose down'
 
-            sh 'docker rmi fastapi-infosimpleapi:latest'
+            sh 'docker rmi api-info-simple-fastapi:latest'
         }
 
         success {
