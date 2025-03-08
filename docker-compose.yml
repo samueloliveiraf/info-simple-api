@@ -7,4 +7,4 @@ services:
     ports:
       - "8010:8010"
     volumes:
-      - ./app:/app
+      - .:/app
