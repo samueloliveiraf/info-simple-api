@@ -24,18 +24,13 @@ pipeline {
     }
 
     post {
-        always {
-            sh 'docker-compose down'
-
-            sh 'docker rmi api-info-simple-fastapi:latest'
-        }
-
         success {
-            echo 'Pipeline executado com sucesso!'
+            echo 'Pipeline executado com sucesso! Contêiner está em execução.'
         }
-
         failure {
-            echo 'Pipeline falhou!'
+            echo 'Pipeline falhou! Parando e removendo contêiner.'
+            sh 'docker-compose down'
         }
     }
+
 }
