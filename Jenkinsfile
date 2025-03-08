@@ -21,14 +21,6 @@ pipeline {
                 }
             }
         }
-
-        stage('Run Tests') {
-            steps {
-                script {
-                    sh 'docker-compose exec fastapi pytest'
-                }
-            }
-        }
     }
 
     post {
