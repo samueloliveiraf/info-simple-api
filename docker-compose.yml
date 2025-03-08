@@ -5,6 +5,6 @@ services:
     build: .
     container_name: fastapi-infosimpleapi
     ports:
-      - "8000:8000"
+      - "8010:8010"
     volumes:
       - ./app:/app
